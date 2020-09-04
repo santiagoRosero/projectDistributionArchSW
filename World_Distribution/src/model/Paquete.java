@@ -10,14 +10,16 @@ public class Paquete {
     public static final int CANT_A = 3;
     public final static int CANT_B=4;
     private List<Articulo<String>> products;
-    private int id;
+    private String id;
+    private double volTotal;
 
-    public Paquete (int id){
+    public Paquete (String id){
         this.id = id;
         this.products = new ArrayList<>();
+        volTotal = 0;
     }
 
-    public int getId(){
+    public String getId(){
         return id;
     }
 
@@ -61,6 +63,15 @@ public class Paquete {
             }
         }
 
+    }
+
+    public double getVoltotal(){
+
+        for(int i =0 ; i<products.size();i++){
+            volTotal += products.get(i).getVolume();
+        }
+        
+        return volTotal;
     }
     
 }
