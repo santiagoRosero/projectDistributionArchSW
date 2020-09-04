@@ -7,7 +7,6 @@ import Exception.PaqueteException;
 
 public class Paquete {
 
-    public static final int CANT = 3;
     private List<Articulo<String>> products;
     private String id;
     private double volTotal;
@@ -69,7 +68,7 @@ public class Paquete {
         for(int i =0 ; i<products.size();i++){
             volTotal += products.get(i).getVolume();
         }
-        
+
         return volTotal;
     }
     
