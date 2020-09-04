@@ -7,6 +7,8 @@ import Exception.PaqueteException;
 
 public class Paquete {
 
+    public static final int CANT_A = 3;
+    public static final int CANT_B=4;
     private List<Articulo<String>> products;
     private String id;
     private double volTotal;
@@ -40,7 +42,7 @@ public class Paquete {
         }
 
         if(pdt.getProduct()=="A"){
-            if(pdtA>3){
+            if(pdtA>CANT_A){
                 products.add(pdt);
                 return true;
             }
@@ -51,7 +53,7 @@ public class Paquete {
         }
         else {
 
-            if(pdtB>=4){
+            if(pdtB>=CANT_B){
                 products.add(pdt);
                 return true;
             }
