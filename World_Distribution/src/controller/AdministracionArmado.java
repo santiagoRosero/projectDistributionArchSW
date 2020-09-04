@@ -8,8 +8,8 @@ public class AdministracionArmado {
 
     private Paquete pqt;
 
-    public AdministracionArmado (Paquete pqt){
-        this.pqt = pqt;
+    public AdministracionArmado (int code){
+        pqt = new Paquete("Pk_" + code);
     }
 
     public Paquete getPackage(){
